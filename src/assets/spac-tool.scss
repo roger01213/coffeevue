@@ -1,0 +1,58 @@
+@mixin phone-size{
+    @media(max-width:414px){
+      @content;
+    }
+  }
+
+//   margin 專區
+.m-l-s{
+    margin-left: 15px;
+}
+.m-l-m{
+    margin-left: 31px;
+}
+
+.m-l-l{
+    margin-left: 36px;
+}
+.m-l-xl{
+    margin-left:  47px;
+}
+
+
+// padding 專區
+
+.pb-s{
+    padding-bottom: 12px;
+}
+
+.pb-m{
+    padding-bottom: 40px;
+}
+
+.pb-l{
+    padding-bottom: 60px;
+}
+.pb-xl{
+    padding-bottom: 80px;
+}
+
+.pb-xxl{
+    padding-bottom: 20px;
+}
+
+.pt-s{
+    padding-top: 12px;
+}
+.pt-m{
+    padding-top: 20px;
+}
+.pt-l{
+    padding-top: 40px;
+}
+.pt-xl{
+    padding-top: 60px;
+}
+.pt-xxl{
+    padding-top: 80px;
+}

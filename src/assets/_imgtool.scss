@@ -1,0 +1,226 @@
+@mixin image-tool(){
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+@mixin phone-size{
+    @media(max-width:414px){
+      @content;
+    }
+  }
+
+// /indeximg/ 
+.log-img11{
+    /*暫時給他H*/ 
+    @include image-tool;    
+    height: 555px;
+    background-image:url(https://images.unsplash.com/photo-1447753072467-2f56032d1d48?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=667&q=80);
+    @include phone-size{
+        height: 350px;
+    }
+}
+.log-img22{
+    /*暫時給他H*/ 
+    height: 555px;
+    @include image-tool;
+    background-image:url(https://images.unsplash.com/photo-1518800383600-44551b3c739c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80);
+    @include phone-size{
+        height: 350px;
+    }
+}
+
+.log-img33{
+    /*暫時給他H*/ 
+    height: 555px;
+    @include image-tool;
+    background-image:url(https://images.unsplash.com/photo-1538391382455-5a95e0b549de?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80);
+    @include phone-size{
+        height: 350px;
+    }
+}
+
+
+
+
+
+// 
+
+.banner{
+    /*暫時給他H*/ 
+    padding-top: 295px;
+    padding-bottom: 295px;
+    height: auto;
+    @include image-tool;
+    background-image:url(https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80);
+  
+
+}
+
+
+.fill-mail{
+    /*暫時給他H*/ 
+    padding-top: 312px;
+    padding-bottom: 112px;
+    height: auto;
+    @include image-tool;
+    background-image:url(https://images.unsplash.com/photo-1441336558687-a06957a7642a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
+}
+
+.log-img{
+    /*暫時給他H*/ 
+   
+    height: 730px;
+    @include image-tool;
+    background-image:url(https://images.unsplash.com/photo-1509785307050-d4066910ec1e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=628&q=80);
+    @include phone-size{
+        height: 220px;
+    }
+}
+
+
+
+// product-2 img
+.product-2-1-img{
+	height: 400px; 
+	background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/perfume-week6/product1.jpg?raw=true);
+    @include image-tool;
+    @include phone-size{
+        height: 220px;
+    }
+	
+}
+
+.product-2-2-img{
+	height: 640px; 
+	background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/perfume-week6/product2.jpg?raw=true);
+    @include image-tool;
+	
+}
+
+
+.product-2-3-img{
+	height: 640px; 
+	background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/perfume-week6/product3.jpg?raw=true);
+    @include image-tool;
+}
+
+
+.product-2-4-img{
+	height: 460px; 
+	background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/perfume-week6/product1.jpg?raw=true);
+    @include image-tool;
+   
+	
+}
+
+
+// product-2-1-img
+.product-1-1-img{
+	height: 225px; 
+	background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/products1.jpg);
+    @include image-tool;
+    @include phone-size{
+        height: 165px;
+    }
+	
+}
+
+.product-1-2-img{
+	height: 225px; 
+	background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index6.jpg);
+    @include image-tool;
+    @include phone-size{
+        height: 165px;
+    }
+	
+}
+
+.product-1-3-img{
+	height: 225px; 
+	background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/products3.jpg);
+    @include image-tool;
+    @include phone-size{
+        height: 165px;
+    }
+}
+.product-1-4-img{
+	height: 225px; 
+	background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/products4.jpg);
+    @include image-tool;
+    @include phone-size{
+        height: 165px;
+    }
+	
+}
+.product-1-5-img{
+	height: 225px; 
+	background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/products5.jpg);
+    @include image-tool;
+    @include phone-size{
+        height: 165px;
+    }
+	
+}
+.product-1-6-img{
+	height: 225px; 
+	background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index4.jpg);
+    @include image-tool;
+    @include phone-size{
+        height: 165px;
+    }
+	
+}
+.product-1-7-img{
+	height: 225px; 
+	background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/products7.jpg);
+    @include image-tool;
+    @include phone-size{
+        height: 165px;
+    }
+	
+}
+.product-1-8-img{
+	height: 225px; 
+	background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/products8.jpg);
+    @include image-tool;
+    @include phone-size{
+        height: 165px;
+    }
+	
+}
+.product-1-9-img{
+	height: 225px; 
+	background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index3.png);
+    @include image-tool;
+    @include phone-size{
+        height: 165px;
+    }
+	
+}
+.product-1-10-img{
+	height: 225px; 
+	background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/products10.jpg);
+    @include image-tool;
+    @include phone-size{
+        height: 165px;
+    }
+	
+}
+.product-1-11-img{
+	height: 225px; 
+	background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/products11.jpg);
+    @include image-tool;
+    @include phone-size{
+        height: 165px;
+    }
+}
+.product-1-12-img{
+	height: 225px; 
+	background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/products12.jpg);
+    @include image-tool;
+    @include phone-size{
+        height: 165px;
+    }
+}
