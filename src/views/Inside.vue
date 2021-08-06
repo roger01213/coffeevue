@@ -3,8 +3,8 @@
 
   <div class="banner">
     <div class="container">
-      <div class="row">
-        <div class="col-md-5 ml-auto text-white">
+      <div class="row justify-content-end">
+        <div class="col-md-5  text-white ">
           <ul class="list-unstyled" data-aos="fade-up">
             <li>
               <h1>Drink your coffee</h1>
