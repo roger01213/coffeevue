@@ -1,7 +1,8 @@
 <template>
  <div class="container-fluid">
+   <input type="text" v-model="search" placeholder="口味查詢 ex:抹茶"> 
     <div class="row mt-4">
-      <div class="col-md-4 mb-4" v-for="item in products" :key="item.id">
+      <div class="col-md-4 mb-4" v-for="item in searchproducts" :key="item.id">
         <div class="card border-0 shadow-sm">
           <div
             style="
@@ -63,7 +64,8 @@ export default {
     return {
       products: [],
       product: {},
-     
+      search:"", 
+      searchproducts:[],
     };
   },
   components: {
@@ -101,9 +103,19 @@ export default {
    
     },
   },
+  computed:{
+    searchproducts(){
+      return  this.products.filter((item,i)=>{
+        return item.title.match(this.search)
+      });
+    }
+  },
+
+
   created() {
     //由生命週期取得商品資料
     this.getProducts();
   },
+
 };
 </script>
