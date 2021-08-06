@@ -7,16 +7,16 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
+        <li class="nav-item linkhover">
          <router-link class="nav-link" href="#" to="/">首頁</router-link>
         </li>
-        <li class="nav-item">
+        <li class="nav-item linkhover">
           <router-link class="nav-link" href="#" to="/customer_order">咖啡精品</router-link>
         </li>
-        <li class="nav-item">
+        <li class="nav-item linkhover">
           <router-link class="nav-link" href="#" to="/cartlist">購物車</router-link>
         </li>
-         <li class="nav-item">
+         <li class="nav-item linkhover">
           <router-link class="nav-link" href="#" to="/login">登入頁面</router-link>
         </li>
       </ul>
