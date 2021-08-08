@@ -96,14 +96,14 @@ export default {
       const productComponent = this.$refs.ProductModal;
       this.$http[httpMethod](api, { data: this.tempProduct }).then(
         (response) => {
-          console.log(response);
+          // console.log(response);
           productComponent.hideModal();
           this.getProducts();
         }
       );
     },
     openModal(isNew, item) {
-      console.log(isNew, item);
+      // console.log(isNew, item);
       if (isNew) {
         this.tempProduct = {};
       } else {
@@ -122,9 +122,9 @@ export default {
           //   console.log(res.data);
           this.products = res.data.products;
           this.pagination = res.data.pagination;
-          console.log("res.data",res.data);
-          console.log("products", this.products);
-          console.log("pagination", this.pagination);
+          // console.log("res.data",res.data);
+          // console.log("products", this.products);
+          // console.log("pagination", this.pagination);
         }
       });
     },
@@ -136,7 +136,7 @@ export default {
     delProduct() {
       const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/product/${this.tempProduct.id}`;
       this.$http.delete(url).then((response) => {
-        console.log(response.data);
+        // console.log(response.data);
         const delComponent = this.$refs.delModal;
         delComponent.hideModal();
         this.getProducts();
