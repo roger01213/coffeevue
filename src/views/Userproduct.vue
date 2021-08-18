@@ -3,7 +3,7 @@
   <div class="container">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item linkhover"><router-link to="/customer_order">購物車</router-link></li>
+        <li class="breadcrumb-item linkhover"><router-link to="/customer_order">返回商品列</router-link></li>
         <li class="breadcrumb-item active" aria-current="page">{{ product.title }}</li>
       </ol>
     </nav>
@@ -27,6 +27,7 @@
             </select>
         <button type="button" class="btn btn-outline-danger"
                 @click="addToCart(product.id,product.num)">
+                <i class="bi bi-cart-plus"></i>
           加到購物車
         </button>
       </div>
@@ -74,9 +75,9 @@ export default {
         qty,
       };
       const addmodalcomponent=this.$refs.AddModal;
-      // this.isLoading = true;
+      
       this.$http.post(url, { data: cart }).then((response) => {
-        this.isLoading = false;
+       
         // this.$httpMessageState(response, '加入購物車');
         console.log("成功加入購物");
         this.$router.push('/customer_order');

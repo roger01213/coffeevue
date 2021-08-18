@@ -8,16 +8,16 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item linkhover">
-         <router-link class="nav-link" href="#" to="/">首頁</router-link>
+         <router-link class="nav-link" href="#" to="/"><i class="bi bi-house-door">首頁</i> </router-link>
         </li>
         <li class="nav-item linkhover">
-          <router-link class="nav-link" href="#" to="/customer_order">咖啡精品</router-link>
+          <router-link class="nav-link" href="#" to="/customer_order"><i class="bi bi-cup-straw">咖啡精品</i></router-link>
         </li>
         <li class="nav-item linkhover">
-          <router-link class="nav-link" href="#" to="/cartlist">購物車</router-link>
+          <router-link class="nav-link" href="#" to="/cartlist"><i class="bi bi-cart-fill">購物車</i></router-link>
         </li>
          <li class="nav-item linkhover">
-          <router-link class="nav-link" href="#" to="/login">登入頁面</router-link>
+          <router-link class="nav-link" href="#" to="/login"> <i class="bi bi-person">登入頁面</i></router-link>
         </li>
       </ul>
      </div>
@@ -38,10 +38,10 @@
         </li>
         <li>
           <ul class=" list-unstyled  d-md-flex justify-content-md-between d-none d-md-block pt-s">
-          <li> <router-link  class="text-white  text-center d-md-block" to="/"> 首頁</router-link></li>
-          <li> <router-link  class="text-white  text-center d-md-block m-l-l" to="/login"> 登入頁面</router-link></li>
-          <li><router-link class="text-white  text-center d-md-block m-l-l" to="/customer_order">咖啡精品</router-link></li>
-          <li><router-link class="text-white  text-center d-md-block m-l-l" to="/cartlist">購物車</router-link></li>
+          <li> <router-link  class="text-white  text-center d-md-block" to="/"> <i class="bi bi-house-door">首頁</i></router-link></li>
+          <li> <router-link  class="text-white  text-center d-md-block m-l-l" to="/login"> <i class="bi bi-person">登入頁面</i></router-link></li>
+          <li><router-link class="text-white  text-center d-md-block m-l-l" to="/customer_order"><i class="bi bi-cup-straw">咖啡精品</i></router-link></li>
+          <li><router-link class="text-white  text-center d-md-block m-l-l" to="/cartlist"><i class="bi bi-cart-fill">購物車</i></router-link></li>
 
           </ul>
         </li>

@@ -144,9 +144,11 @@ export default {
       this.$http.post(url, { data: order }).then((response) => {
             // console.log('訂單已建立', response);
             if (response.data.success) {
-              this.$router.push(`/user/usercheckout/${response.data.orderId}`);
+              this.$router.push(`/usercheckout/${response.data.orderId}`);
             }
-            
+            else{
+              alert('請輸入正確的資料(格式)');
+            }
           });
     },
 

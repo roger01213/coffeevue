@@ -3,7 +3,7 @@
        aria-labelledby="exampleModalLabel" aria-hidden="true" ref="modal">
     <div class="modal-dialog" role="document">
       <div class="modal-content border-0">
-        <div class="modal-header bg-success text-white">
+        <div class="modal-header bg-danger text-white">
           <h5 class="modal-title">
             購物提醒
           </h5>

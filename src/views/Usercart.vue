@@ -59,7 +59,7 @@
               class="btn btn-outline-secondary btn-sm"
               @click="getProduct(item)"
             >
-              <i class="fas fa-spinner fa-spin"></i>
+            <i class="bi bi-search"></i>
               查看更多
             </button>
             <button
@@ -67,8 +67,9 @@
               class="btn btn-outline-danger btn-sm ml-auto"
               @click="addToCart(item.id)"
             >
-              <i class="fas fa-spinner fa-spin"></i>
-              加到購物車
+           
+              <i class="bi bi-cart-plus"></i>加到購物車
+              
             </button>
           </div>
         </div>
@@ -115,11 +116,11 @@ export default {
     getProducts() {
       //取得商品資料
       const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/products/all`;
-      // this.isLoading = true;
+      
       this.$http.get(url).then((response) => {
         this.products = response.data.products;
         console.log("products:", response);
-        this.isLoading = false;
+        
       });
     },
     getProduct(item) {
