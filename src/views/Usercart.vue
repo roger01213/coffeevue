@@ -1,6 +1,29 @@
 <template>
-  <div class="container">
-    <div class="row">
+  <div class="container ">
+    <ul class="d-md-flex justify-content-center">
+      <li >
+        <input
+          type="text"
+          v-model="search"
+          placeholder="口味查詢 ex:抹茶"
+          size="10"
+          style="font-size: 16px"
+        />
+      </li>
+      <li>
+        <select v-model="selecthistory">
+          <option value="" disabled selected>預覽紀錄</option>
+          <option :value="item" v-for="item in history" :key="item.title">
+            {{ item.title }}
+          </option>
+        </select>
+      </li>
+      <li><button class="btn btn-danger btn-sm" @click.prevent="delhistory">
+          清除預覽紀錄
+        </button></li>
+    </ul>
+    <!-- //////////////////////////////// -->
+    <!-- <div class="row">
       <div class="col-md-3">
         <input
           type="text"
@@ -21,10 +44,17 @@
           清除預覽紀錄
         </button>
       </div>
-    </div>
+    </div> -->
+    <!-- //////////////////////////////////////////////////////////////////////////////// -->
+
     <div class="row mt-4">
       <div class="col-md-4 mb-4" v-for="item in searchproducts" :key="item.id">
-        <div class="card border-0 shadow-sm">
+        <div
+          class="card border-0 shadow-sm"
+          data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000"
+        >
           <a
             @click.prevent="getProduct(item)"
             href="#"
@@ -59,7 +89,7 @@
               class="btn btn-outline-secondary btn-sm"
               @click="getProduct(item)"
             >
-            <i class="bi bi-search"></i>
+              <i class="bi bi-search"></i>
               查看更多
             </button>
             <button
@@ -67,9 +97,7 @@
               class="btn btn-outline-danger btn-sm ml-auto"
               @click="addToCart(item.id)"
             >
-           
               <i class="bi bi-cart-plus"></i>加到購物車
-              
             </button>
           </div>
         </div>
@@ -80,6 +108,9 @@
 </template>
 
 <style scoped>
+ul{
+  list-style: none;
+}
 .img {
   display: block;
   height: 150px;
@@ -116,11 +147,10 @@ export default {
     getProducts() {
       //取得商品資料
       const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/products/all`;
-      
+
       this.$http.get(url).then((response) => {
         this.products = response.data.products;
         console.log("products:", response);
-        
       });
     },
     getProduct(item) {
