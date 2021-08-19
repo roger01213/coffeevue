@@ -8,15 +8,15 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item linkhover">
-         <router-link class="nav-link" href="#" to="/"><i class="bi bi-house-door">首頁</i> </router-link>
+         <router-link class="nav-link text-center" href="#" to="/"><i class="bi bi-house-door">首頁</i> </router-link>
         </li>
         <li class="nav-item linkhover">
-          <router-link class="nav-link" href="#" to="/customer_order"><i class="bi bi-cup-straw">咖啡精品</i></router-link>
+          <router-link class="nav-link text-center" href="#" to="/customer_order"><i class="bi bi-cup-straw">咖啡精品</i></router-link>
         </li>
-        <li class="nav-item linkhover">
+        <li class="nav-item linkhover text-center">
           <router-link class="nav-link" href="#" to="/cartlist"><i class="bi bi-cart-fill">購物車</i></router-link>
         </li>
-         <li class="nav-item linkhover">
+         <li class="nav-item linkhover text-center">
           <router-link class="nav-link" href="#" to="/login"> <i class="bi bi-person">登入頁面</i></router-link>
         </li>
       </ul>

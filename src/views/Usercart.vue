@@ -1,51 +1,40 @@
 <template>
   <div class="container ">
-    <ul class="d-md-flex justify-content-center">
-      <li >
-        <input
-          type="text"
-          v-model="search"
-          placeholder="口味查詢 ex:抹茶"
-          size="10"
-          style="font-size: 16px"
-        />
-      </li>
-      <li>
-        <select v-model="selecthistory">
-          <option value="" disabled selected>預覽紀錄</option>
-          <option :value="item" v-for="item in history" :key="item.title">
-            {{ item.title }}
-          </option>
-        </select>
-      </li>
-      <li><button class="btn btn-danger btn-sm" @click.prevent="delhistory">
-          清除預覽紀錄
-        </button></li>
-    </ul>
-    <!-- //////////////////////////////// -->
-    <!-- <div class="row">
-      <div class="col-md-3">
-        <input
-          type="text"
-          v-model="search"
-          placeholder="口味查詢 ex:抹茶"
-          size="20"
-          style="font-size: 20px"
-        />
-      </div>
-      <div class="col-md-8">
-        <select v-model="selecthistory">
-          <option value="" disabled selected>預覽紀錄</option>
-          <option :value="item" v-for="item in history" :key="item.title">
-            {{ item.title }}
-          </option>
-        </select>
-        <button class="btn btn-danger" @click.prevent="delhistory">
-          清除預覽紀錄
-        </button>
-      </div>
-    </div> -->
-    <!-- //////////////////////////////////////////////////////////////////////////////// -->
+    
+    <div class="input-group mb-3 mt-3">
+      <span class="input-group-text" id="inputGroup-sizing-default"
+        >口味查詢</span>
+      <input
+        type="text"
+        v-model="search"
+        placeholder="ex:抹茶"
+        class="form-control"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-default"
+      />
+    </div>
+    <div class="input-group mb-3">
+      <button
+        class="btn btn-secondary"
+        type="button"
+        @click.prevent="delhistory"
+      >
+        清除預覽紀錄
+      </button>
+      <select
+        v-model="selecthistory"
+        class="form-select"
+        id="inputGroupSelect03"
+        aria-label="Example select with button addon"
+      >
+        <option disabled selected>預覽紀錄</option>
+        <option :value="item" v-for="item in history" :key="item.title">
+          {{ item.title }}
+        </option>
+      </select>
+    </div>
+
+    
 
     <div class="row mt-4">
       <div class="col-md-4 mb-4" v-for="item in searchproducts" :key="item.id">
@@ -108,7 +97,7 @@
 </template>
 
 <style scoped>
-ul{
+ul {
   list-style: none;
 }
 .img {
