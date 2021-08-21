@@ -17,6 +17,7 @@ export default {
         Navbar,
     },
   created() {
+    //將cookie裡的token取出來
     const token = document.cookie.replace(
       /(?:(?:^|.*;\s*)hexToken\s*=\s*([^;]*).*$)|^.*$/,
       "$1"

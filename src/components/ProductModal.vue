@@ -44,25 +44,7 @@
                 @change="uploadFile"/>
               </div>
               <img class="img-fluid" alt="" :src="tempProduct.imageUrl"/>
-              <!-- 延伸技巧，多圖
-              <div class="mt-5">
-                <div class="mb-3 input-group">
-                  <input
-                    type="url"
-                    class="form-control form-control"
-                
-                    placeholder="請輸入連結"
-                  />
-                  <button type="button" class="btn btn-outline-danger">
-                    移除
-                  </button>
-                </div>
-                <div>
-                  <button class="btn btn-outline-primary btn-sm d-block w-100">
-                    新增圖片
-                  </button>
-                </div>
-              </div>  -->
+             
             </div>
             <div class="col-sm-8">
               <div class="mb-3">
@@ -205,9 +187,9 @@ export default {
       this.modal.hide();
     },
     uploadFile() {
-      const uploadedFile= this.$refs.fileInput.files[0];
-      const formData= new FormData();
-      formData.append('file-to-upload', uploadedFile);
+      const uploadedFile= this.$refs.fileInput.files[0]; //取得圖片元素內容
+      const formData= new FormData(); //新增Form表單
+      formData.append('file-to-upload', uploadedFile); //將圖片添加進表單
 
       const url=`${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/upload`;
       this.$http.post(url, formData).then((response)=>{

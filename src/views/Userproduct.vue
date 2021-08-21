@@ -58,12 +58,12 @@ export default {
       const api = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/product/${this.id}`;
      
       this.$http.get(api).then((response) => {
-        console.log(response.data);
+        // console.log(response.data);
      
         if (response.data.success) {
           this.product = {...response.data.product};
           this.product.num=1;
-          console.log('product',this.product);
+          // console.log('product',this.product);
 
 }
       });
@@ -78,8 +78,8 @@ export default {
       
       this.$http.post(url, { data: cart }).then((response) => {
        
-        // this.$httpMessageState(response, '加入購物車');
-        console.log("成功加入購物");
+       
+        // console.log("成功加入購物");
         this.$router.push('/customer_order');
         addmodalcomponent.showModal();
       });

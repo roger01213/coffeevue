@@ -89,7 +89,7 @@
 </template>
 
 <script>
-// import $ from "jquery";
+
 
 export default {
   data() {
@@ -138,7 +138,7 @@ export default {
     
 
     createOrder() {
-    //   const vm = this;
+    
       const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/order`;
       const order = this.form;
       this.$http.post(url, { data: order }).then((response) => {

@@ -139,7 +139,7 @@ export default {
 
       this.$http.get(url).then((response) => {
         this.products = response.data.products;
-        console.log("products:", response);
+        // console.log("products:", response);
       });
     },
     getProduct(item) {
@@ -165,7 +165,7 @@ export default {
       };
       const addmodalcomponent = this.$refs.AddModal;
       this.$http.post(url, { data: cart }).then((response) => {
-        console.log("成功加入購物車");
+        // console.log("成功加入購物車");
         addmodalcomponent.showModal();
       });
     },
@@ -185,7 +185,7 @@ export default {
           this.history.splice(i, 1);
         }
       });
-      console.log("item", item);
+      // console.log("item", item);
       this.history.push(item);
       localStorage.setItem("history", JSON.stringify(this.history));
       this.$router.push(`/product/${item.id}`);

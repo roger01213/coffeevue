@@ -65,7 +65,7 @@ export default {
         if (res.data.success) {
           const { token, expired } = res.data;
           document.cookie = `hexToken=${token};expire=${new Date(expired)}`; ///將token及到期日存到cookie裡
-          console.log(res);
+          // console.log(res);
           this.$router.push('/dashboard/products'); //登入後轉址到products產品列表
         }
       });

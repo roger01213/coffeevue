@@ -58,28 +58,7 @@ const routes = [
       },
     ]
   },
-  // {
-  //   path: '/user',
-  //   component: () => import('../views/Userboard.vue'),
-  //   children: [
-  //     {
-  //       path: 'cart', //產品列表
-  //       component: () => import('../views/Usercart.vue'),
-  //     },
-  //     {
-  //       path: 'product/:productId', //產品內頁
-  //       component: () => import('../views/Userproduct.vue'),
-  //     },
-  //     {
-  //       path: 'cartlist', //產品內頁
-  //       component: () => import('../views/Cartlist.vue'),
-  //     },
-  //     {
-  //       path: 'usercheckout/:id', //產品內頁
-  //       component: () => import('../views/Usercheckout.vue'),
-  //     },
-  //   ],
-  // },
+ 
 ];
 
 

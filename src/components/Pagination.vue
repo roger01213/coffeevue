@@ -44,7 +44,7 @@ export default {
       // console.log('current page',this.pages.current_page)
       if (this.pages.has_next) {
           let nextPage=this.pages.current_page+1;
-        console.log("this.pages.current_page++", this.pages.current_page+1);
+        // console.log("this.pages.current_page++", this.pages.current_page+1);
          this.$emit("emit-nextPage", nextPage);
 
       }
@@ -52,7 +52,7 @@ export default {
     prePage() {
       if (this.pages.has_pre) {
           let prePage=this.pages.current_page-1
-        console.log("this.pages.current_page--", this.pages.current_page-1);
+        // console.log("this.pages.current_page--", this.pages.current_page-1);
           this.$emit("emit-prePage", prePage);
 
       }
