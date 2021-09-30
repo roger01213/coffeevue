@@ -144,6 +144,7 @@ export default {
       this.$http.post(url, { data: order }).then((response) => {
             // console.log('訂單已建立', response);
             if (response.data.success) {
+              // console.log(response.data);
               this.$router.push(`/usercheckout/${response.data.orderId}`);
             }
             else{

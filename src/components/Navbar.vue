@@ -18,8 +18,11 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
+           <li class="nav-item">
+            <router-link class="nav-link" href="#" to="/dashboard/products">products</router-link>
+          </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
+            <router-link class="nav-link" href="#" to="/dashboard/customerproductlist">客戶訂單</router-link>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" @click.prevent="signout">登出</a>
